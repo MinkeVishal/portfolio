@@ -96,7 +96,7 @@ const Hero = () => {
           <div className="flex-shrink-0 mt-8 md:mt-0 relative">
             <div className="absolute -inset-2 bg-gradient-to-tr from-blue-400 via-indigo-400 to-purple-400 rounded-full blur-xl opacity-60 animate-pulse-slow z-0" />
             <img
-              src="./src/vishal.jpeg"
+              src="/vishal.jpeg"
               alt="Vishal Minke"
               className="relative w-40 h-40 md:w-56 md:h-56 object-cover rounded-full border-4 border-blue-500 shadow-xl animate-float hover:scale-105 transition-transform duration-300 z-10"
             />

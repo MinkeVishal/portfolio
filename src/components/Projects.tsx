@@ -7,7 +7,7 @@ const Projects = () => {
       id: 1,
       title: 'Zerodha Clone',
       description: 'Built a responsive frontend clone of Zerodha clone of offical website as part of apna collage web development course. recreated the layout navigations bar landing page and interactive elements to closely  match the original site.',
-      image: './src/zerodha.png',
+      image: '/zerodha.png',
       technologies: ['Reactjs', 'Node.js', 'MongoDB', 'Expressjs'],
       liveUrl: 'https://github.com/MinkeVishal',
       githubUrl: 'https://github.com/MinkeVishal'

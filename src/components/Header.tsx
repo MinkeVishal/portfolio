@@ -28,7 +28,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-blue-600">
-            <img src="./src/vishal logo.png" alt="Logo" className="h-8 w-auto inline-block align-middle mr-2" />
+            <img src="/vishal_logo.png" alt="Logo" className="h-8 w-auto inline-block align-middle mr-2" />
           </div>
           
           {/* Desktop Navigation */}

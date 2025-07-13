@@ -8,7 +8,7 @@ const certificates = [
     issuer: 'APNA COLLAGE',
     date: 'sept 2024',
     link: 'https://www.linkedin.com/in/%F0%9D%90%95%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A5-%F0%9D%90%8C%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A4%F0%9D%90%9E-850409239/" className="group relative text-gray-600 hover:text-blue-600 transform hover:scale-125 transition-all duration-300"',
-    image: './src/Apna Collage.png',
+    image: '/Apna_Collage.png',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const certificates = [
     issuer: 'ALMABETTER',
     date: 'Jun 2025',
     link: 'https://www.linkedin.com/in/%F0%9D%90%95%F0%9D%90%A2%F0%9D%90%AC%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A5-%F0%9D%90%8C%F0%9D%90%A2%F0%9D%90%A7%F0%9D%90%A4%F0%9D%90%9E-850409239/" className="group relative text-gray-600 hover:text-blue-600 transform hover:scale-125 transition-all duration-300"',
-    image: './src/Almabetter.png',
+    image: '/Almabetter.png',
   },
 ];
 
