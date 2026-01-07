@@ -1,35 +1,37 @@
 import { useState } from 'react';
-import { Award, ExternalLink, Calendar, Building2, X, ZoomIn, ZoomOut } from 'lucide-react';
+import { Briefcase, ExternalLink, Calendar, Building2, X, ZoomIn, ZoomOut } from 'lucide-react';
 
-const certificates = [
+const internships = [
   {
     id: 1,
-    title: 'MERN Stack Developer',
-    issuer: 'Apna College',
-    date: 'Sept 2024',
-    link: '/Apna_Collage.png',
-    image: '/Apna_Collage.png',
-    color: 'from-violet-500 to-purple-600',
-    bgColor: 'bg-violet-500/10',
+    title: 'Full Stack Developer Intern',
+    company: 'Edudiagno Pvt.Ltd',
+    duration: 'March 2025 - September 2025',
+    link: '/Internship1.png',
+    image: '/Internship1.png',
+    color: 'from-emerald-500 to-teal-600',
+    bgColor: 'bg-emerald-500/10',
+    description: 'Built user-friendly web applications using React and Node.js.',
   },
   {
     id: 2,
-    title: 'Full Stack Data Science & AI',
-    issuer: 'AlmaBetter',
-    date: 'Jun 2025',
-    link: '/Almabetter.png',
-    image: '/Almabetter.png',
-    color: 'from-cyan-500 to-blue-600',
-    bgColor: 'bg-cyan-500/10',
+    title: 'Business Analytics Intern',
+    company: 'Outlook Publishing pvt.Ltd.',
+    duration: 'Jan 2025 - May 2025',
+    link: '/Outlook certificate.jpeg',
+    image: '/Outlook certificate.jpeg',
+    color: 'from-amber-500 to-orange-600',
+    bgColor: 'bg-amber-500/10',
+    description: 'Created interactive dashboards and analyzed data using Power BI and Excel.',
   },
 ];
 
-const Certificates = () => {
-  const [selectedCertificate, setSelectedCertificate] = useState<typeof certificates[0] | null>(null);
+const Internships = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState<typeof internships[0] | null>(null);
   const [isZoomed, setIsZoomed] = useState(false);
 
-  const openModal = (cert: typeof certificates[0]) => {
-    setSelectedCertificate(cert);
+  const openModal = (internship: typeof internships[0]) => {
+    setSelectedCertificate(internship);
     setIsZoomed(false);
     document.body.style.overflow = 'hidden';
   };
@@ -41,80 +43,84 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificates" className="py-24 bg-slate-900 relative overflow-hidden">
+    <section id="internships" className="py-24 bg-slate-950 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/20 mb-6">
-              <Award className="w-4 h-4 text-violet-400" />
-              <span className="text-sm font-medium text-violet-300">Achievements</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-6">
+              <Briefcase className="w-4 h-4 text-emerald-400" />
+              <span className="text-sm font-medium text-emerald-300">Experience</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-violet-200 to-cyan-200 bg-clip-text text-transparent">
-                Courses & Certificates
+              <span className="bg-gradient-to-r from-white via-emerald-200 to-amber-200 bg-clip-text text-transparent">
+                Internship Experience
               </span>
             </h2>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              Professional certifications and achievements that validate my expertise
+              Hands-on industry experience that shaped my professional journey
             </p>
           </div>
 
-          {/* Certificates Grid */}
+          {/* Internships Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            {certificates.map((cert) => (
+            {internships.map((internship) => (
               <div
-                key={cert.id}
-                className="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden hover:border-slate-600 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
+                key={internship.id}
+                className="group relative bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden hover:border-slate-600 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
               >
                 {/* Certificate Image */}
                 <div className="relative h-56 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
-                  {cert.image ? (
+                  {internship.image ? (
                     <img
-                      src={cert.image}
-                      alt={cert.title}
+                      src={internship.image}
+                      alt={internship.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-slate-800">
-                      <Award className="w-20 h-20 text-slate-600" />
+                      <Briefcase className="w-20 h-20 text-slate-600" />
                     </div>
                   )}
                   
                   {/* Badge */}
-                  <div className={`absolute top-4 right-4 z-20 p-3 rounded-xl bg-gradient-to-br ${cert.color} shadow-lg`}>
-                    <Award className="w-5 h-5 text-white" />
+                  <div className={`absolute top-4 right-4 z-20 p-3 rounded-xl bg-gradient-to-br ${internship.color} shadow-lg`}>
+                    <Briefcase className="w-5 h-5 text-white" />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className={`text-xl font-bold mb-3 bg-gradient-to-r ${cert.color} bg-clip-text text-transparent group-hover:opacity-80 transition-opacity`}>
-                    {cert.title}
+                  <h3 className={`text-xl font-bold mb-2 bg-gradient-to-r ${internship.color} bg-clip-text text-transparent group-hover:opacity-80 transition-opacity`}>
+                    {internship.title}
                   </h3>
+                  
+                  <p className="text-slate-400 text-sm mb-4 line-clamp-2">
+                    {internship.description}
+                  </p>
                   
                   <div className="flex flex-wrap items-center gap-4 text-slate-400">
                     <div className="flex items-center gap-2">
                       <Building2 className="w-4 h-4" />
-                      <span className="text-sm">{cert.issuer}</span>
+                      <span className="text-sm">{internship.company}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      <span className="text-sm">{cert.date}</span>
+                      <span className="text-sm">{internship.duration}</span>
                     </div>
                   </div>
 
                   {/* View Link */}
                   <button
-                    onClick={() => openModal(cert)}
-                    className="mt-4 flex items-center gap-2 text-sm font-medium text-violet-400 group-hover:text-violet-300 transition-colors"
+                    onClick={() => openModal(internship)}
+                    className="mt-4 flex items-center gap-2 text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors"
                   >
                     <span>View Certificate</span>
                     <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -122,7 +128,7 @@ const Certificates = () => {
                 </div>
 
                 {/* Bottom Gradient Line */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${cert.color} transform origin-left transition-transform duration-500 scale-x-0 group-hover:scale-x-100`}></div>
+                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${internship.color} transform origin-left transition-transform duration-500 scale-x-0 group-hover:scale-x-100`}></div>
               </div>
             ))}
           </div>
@@ -145,7 +151,7 @@ const Certificates = () => {
                 <h3 className={`text-xl font-bold bg-gradient-to-r ${selectedCertificate.color} bg-clip-text text-transparent`}>
                   {selectedCertificate.title}
                 </h3>
-                <p className="text-slate-400 text-sm">{selectedCertificate.issuer}</p>
+                <p className="text-slate-400 text-sm">{selectedCertificate.company}</p>
               </div>
               <div className="flex items-center gap-2">
                 <button
@@ -180,4 +186,4 @@ const Certificates = () => {
   );
 };
 
-export default Certificates;
+export default Internships;
