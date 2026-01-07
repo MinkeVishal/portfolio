@@ -20,8 +20,8 @@ const Footer = () => {
 
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+        <div className="py-8 sm:py-16">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 sm:gap-12">
             {/* Brand Section */}
             <div className="space-y-6">
               <div className="flex items-center">

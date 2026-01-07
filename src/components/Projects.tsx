@@ -71,12 +71,12 @@ const Projects = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-20">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-cyan-500/10 border border-violet-500/20 mb-6">
               <Sparkles className="w-4 h-4 text-violet-400" />
               <span className="text-sm font-medium text-violet-300">My Work</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white via-violet-200 to-cyan-200 bg-clip-text text-transparent">
                 Featured Projects
               </span>
@@ -89,7 +89,7 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {projects.map((project) => {
               const IconComponent = project.icon;
               const isHovered = hoveredId === project.id;

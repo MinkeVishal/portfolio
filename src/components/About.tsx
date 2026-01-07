@@ -43,7 +43,7 @@ const About = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white via-violet-200 to-cyan-200 bg-clip-text text-transparent">
-                Turning Vision Into Reality
+                Turning Vision In To Reality
               </span>
             </h2>
             <p className="text-xl text-slate-400 max-w-3xl mx-auto">
@@ -84,12 +84,12 @@ const About = () => {
               </div>
 
               {/* Highlights */}
-              <div className="grid grid-cols-3 gap-4 pt-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4">
                 {highlights.map((item) => (
-                  <div key={item.label} className="text-center p-4 bg-slate-800/30 rounded-xl border border-slate-700/50">
-                    <item.icon className="w-6 h-6 text-violet-400 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-white">{item.value}</p>
-                    <p className="text-sm text-slate-400">{item.label}</p>
+                  <div key={item.label} className="text-center p-2 sm:p-4 bg-slate-800/30 rounded-xl border border-slate-700/50">
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-violet-400 mx-auto mb-1 sm:mb-2" />
+                    <p className="text-lg sm:text-2xl font-bold text-white">{item.value}</p>
+                    <p className="text-xs sm:text-sm text-slate-400">{item.label}</p>
                   </div>
                 ))}
               </div>

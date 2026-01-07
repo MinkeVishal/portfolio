@@ -85,12 +85,12 @@ const Skills = () => {
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
             {skillCategories.map((category, index) => (
               <button
                 key={category.title}
                 onClick={() => setActiveCategory(index)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                   activeCategory === index
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-slate-800/50 text-slate-400 border border-slate-700 hover:border-slate-600 hover:text-white'
@@ -103,18 +103,18 @@ const Skills = () => {
           </div>
 
           {/* Skills Display */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {skillCategories[activeCategory].skills.map((skill, index) => (
               <div
                 key={skill.name}
-                className={`group p-6 bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 hover:border-slate-600 transition-all duration-500 hover:-translate-y-2`}
+                className={`group p-4 sm:p-6 bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 hover:border-slate-600 transition-all duration-500 hover:-translate-y-2`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Skill Icon */}
-                <div className="text-4xl mb-4">{skill.icon}</div>
+                <div className="text-2xl sm:text-4xl mb-2 sm:mb-4">{skill.icon}</div>
 
                 {/* Skill Name */}
-                <h3 className="text-lg font-semibold text-white mb-4">{skill.name}</h3>
+                <h3 className="text-sm sm:text-lg font-semibold text-white mb-2 sm:mb-4">{skill.name}</h3>
 
                 {/* Progress Bar */}
                 <div className="relative">

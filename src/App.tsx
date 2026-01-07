@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import ChatBot from './components/ChatBot';
 
 import Projects from './components/Projects';
 import Internships from './components/Internships';
@@ -47,6 +48,7 @@ function App() {
       <Certificates />
       <Contact />
       <Footer />
+      <ChatBot />
     </div>
   );
 }

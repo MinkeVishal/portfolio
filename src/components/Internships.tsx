@@ -69,14 +69,14 @@ const Internships = () => {
           </div>
 
           {/* Internships Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8">
             {internships.map((internship) => (
               <div
                 key={internship.id}
                 className="group relative bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden hover:border-slate-600 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
               >
                 {/* Certificate Image */}
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-40 sm:h-56 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
                   {internship.image ? (
                     <img
@@ -97,8 +97,8 @@ const Internships = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <h3 className={`text-xl font-bold mb-2 bg-gradient-to-r ${internship.color} bg-clip-text text-transparent group-hover:opacity-80 transition-opacity`}>
+                <div className="p-4 sm:p-6">
+                  <h3 className={`text-lg sm:text-xl font-bold mb-2 bg-gradient-to-r ${internship.color} bg-clip-text text-transparent group-hover:opacity-80 transition-opacity`}>
                     {internship.title}
                   </h3>
                   
@@ -106,14 +106,14 @@ const Internships = () => {
                     {internship.description}
                   </p>
                   
-                  <div className="flex flex-wrap items-center gap-4 text-slate-400">
+                  <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-slate-400">
                     <div className="flex items-center gap-2">
-                      <Building2 className="w-4 h-4" />
-                      <span className="text-sm">{internship.company}</span>
+                      <Building2 className="w-4 h-4 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{internship.company}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm">{internship.duration}</span>
+                      <Calendar className="w-4 h-4 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm">{internship.duration}</span>
                     </div>
                   </div>
 
